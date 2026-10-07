@@ -1,0 +1,8 @@
+runtime/
+state/
+host/
+.cache/
+.tmp/
+logs/
+artifacts/
+workspace/

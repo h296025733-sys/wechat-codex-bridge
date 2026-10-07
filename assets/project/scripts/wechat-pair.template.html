@@ -1,0 +1,4 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta http-equiv="refresh" content="4"><meta name="viewport" content="width=device-width,initial-scale=1"><title>微信扫码连接</title>
+<style>body{margin:0;background:#f5f6f8;color:#20242b;font:18px/1.7 system-ui,"Microsoft YaHei",sans-serif;text-align:center}main{margin:30px auto;padding:28px;max-width:660px;background:white;border-radius:20px}h1{font-size:28px;margin:0 0 8px}p{margin:8px 0}img{display:block;width:min(100%,440px);margin:15px auto}.note{font-size:15px;color:#626b76}</style>
+<main><h1>用手机微信扫一扫</h1><p>打开手机微信 → 右上角「＋」→ 扫一扫</p><img id="qr" alt="正在生成微信连接二维码"><p>扫码后，在微信中确认「连接 OpenClaw」。</p><p class="note">二维码会随登录流程刷新，请扫描此页面当前显示的二维码。<br>这一步是微信绑定，与 ChatGPT 授权是分开的。</p></main>
+<script>document.getElementById('qr').src='wechat-login-current.png?t='+Date.now();</script></html>

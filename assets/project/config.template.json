@@ -1,0 +1,51 @@
+{
+  "gateway": {
+    "mode": "local",
+    "port": 18791,
+    "bind": "loopback",
+    "auth": { "mode": "token", "token": "GENERATED_LOCALLY" },
+    "terminal": { "enabled": false },
+    "nodes": { "pairing": { "autoApproveLocal": false } }
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "SET_BY_INITIALIZER",
+      "skipBootstrap": true,
+      "skills": [],
+      "model": { "primary": "openai/gpt-6-astra", "fallbacks": [] },
+      "models": { "openai/gpt-6-astra": { "agentRuntime": { "id": "codex" } } },
+      "thinkingDefault": "medium",
+      "fastModeDefault": false,
+      "elevatedDefault": "off",
+      "timeoutSeconds": 240,
+      "maxConcurrent": 1,
+      "heartbeat": { "every": "0m", "target": "none" }
+    }
+  },
+  "tools": {
+    "profile": "minimal",
+    "deny": ["*"],
+    "elevated": { "enabled": false },
+    "codeMode": { "enabled": false }
+  },
+  "commands": {
+    "native": false,
+    "nativeSkills": false,
+    "text": false,
+    "bash": false,
+    "config": false,
+    "mcp": false,
+    "plugins": false,
+    "debug": false,
+    "restart": false
+  },
+  "plugins": {
+    "allow": ["openai"],
+    "slots": { "memory": "none" },
+    "entries": { "openai": { "enabled": true } }
+  },
+  "session": { "dmScope": "per-account-channel-peer" },
+  "cron": { "enabled": false },
+  "browser": { "enabled": false },
+  "logging": { "level": "info", "file": "SET_BY_INITIALIZER" }
+}

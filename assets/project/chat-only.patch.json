@@ -1,0 +1,29 @@
+{
+  "plugins": {
+    "allow": ["openai", "codex", "openclaw-weixin"],
+    "entries": {
+      "codex": {
+        "enabled": true,
+        "config": {
+          "appServer": {
+            "transport": "stdio",
+            "homeScope": "agent",
+            "mode": "guardian",
+            "approvalPolicy": "never",
+            "sandbox": "read-only",
+            "clearEnv": ["OPENAI_API_KEY", "CODEX_API_KEY", "OPENAI_ADMIN_KEY"]
+          },
+          "sessionCatalog": { "enabled": false },
+          "computerUse": { "enabled": false },
+          "codexPlugins": { "enabled": false },
+          "supervision": { "enabled": false }
+        }
+      },
+      "openclaw-weixin": { "enabled": true }
+    }
+  },
+  "channels": {
+    "openclaw-weixin": { "enabled": true, "replyProgressMessages": false }
+  },
+  "tools": { "profile": "minimal", "deny": ["*"] }
+}

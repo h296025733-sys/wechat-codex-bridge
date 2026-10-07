@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信接入 Codex"
+  short_description: "用自己的账号搭建微信文字聊天助手，包含授权扫码、网络排错和实际收发验证"
+  default_prompt: "使用 $wechat-codex-bridge，在独立目录把我自己的 Codex 接入我自己的微信，只用于文字聊天；请完成实际收发验证，需要我登录或扫码时告诉我。"
